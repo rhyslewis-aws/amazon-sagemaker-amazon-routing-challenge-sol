@@ -151,13 +151,14 @@ We run the inferernce for route generation locally (e.g. on your laptop or deskt
 Please change your script as per any debugging information revealed in the output or error statements.
 
 ## Step 8. Run sequence generation as a SageMaker processing job
-Now we are ready to generate routes by submititng an Amazon SageMaker processing job running on a `ml.m5.4xlarge` instance.
+Now we are ready to generate routes by submiting an Amazon SageMaker processing job running on a `ml.m5.4xlarge` instance.
 ```bash
 # please set environment variables (e.g. ${bucket_name}) 
 # in `example_inference_job.sh` before running it
 ./example_inference_job.sh
 ```
-Once submission is successful, we can navigate the browser to the Amazon SageMaker Processing jobs console to check if a job named `ppm-rollout-2022-xxx` is indeed running.
+Once submission is successful, we can navigate the browser to the [Amazon SageMaker Processing jobs](https://ap-southeast-2.console.aws.amazon.com/sagemaker/home?#/processing-jobs) console to check if a job named `ppm-rollout-2022-xxx` is indeed running.
+
 
 ## Step 9. Check submission file
 It generally takes less than an hour to complete generating 3,052 route sequences on an `ml.m5.4xlarge` instance. Once the job status becomes `completed`, we can check the generated sequences for all routes by running the following command.
