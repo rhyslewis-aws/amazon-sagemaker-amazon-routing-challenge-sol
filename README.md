@@ -88,6 +88,7 @@ python preprocessing.py --act gen_dist_mat --data_dir  data/${train_data_dir}
 # generate zone information for each stop (training)
 python preprocessing.py --act gen_zone_list --data_dir  data/${train_data_dir}
 # generate ground-truth zone sequence for each route using the Parquet file generated from `gen_route` action
+parquet_file=$(find data/almrrc2021-data-training -name '*.parquet' -printf "%f\n")
 python preprocessing.py --act gen_actual_zone --data_dir  data/${train_data_dir} --pkfn ${parquet_file}
 # generate package information in Parquet (evaluation)
 python preprocessing.py --act gen_route --data_dir  data/${eval_data_dir} --mode eval
