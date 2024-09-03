@@ -349,7 +349,7 @@ def get_actual_zone(df_val, df_act_seq, df_r, data_dir, mode):
             full_zone_seq.append(zone)
         zone_seq_str = '|'.join(zone_seq)
         full_zone_seq_str = '|'.join(full_zone_seq)
-        fline = ','.join([route_id, zone_seq_str, full_zone_seq_str])
+        fline = ','.join([route_id, '1', zone_seq_str, full_zone_seq_str])
         lines.append(fline)
     lines_str = os.linesep.join(lines)
     output_fn = os.path.join(data_dir, 'zone_list', f'actual_zone-{mode}.csv')
