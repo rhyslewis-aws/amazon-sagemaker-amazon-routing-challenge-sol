@@ -54,10 +54,10 @@ if __name__ == "__main__":
     my_inst_type = 'ml.m5.4xlarge'
     processed_dfn = args.processed_dfn
     if args.mode == 'val':
-        prefix_dir = 'Final_June_18_Data'
+        prefix_dir = 'almrrc2021-data-evaluation'
         #processed_dfn = 'lmc_route_full_1637316909.parquet'
     elif args.mode == 'train':
-        prefix_dir = 'Final_March_15_Data'
+        prefix_dir = 'almrrc2021-data-training'
         #processed_dfn = 'lmc_route_full_1627030750.parquet'
     else:
         raise Exception(f'unknown mode {args.mode}')
